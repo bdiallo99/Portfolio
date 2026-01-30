@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boubacar Diallo — Portfolio</title>
+  <meta name="description" content="Portfolio de Boubacar Diallo — Administration Réseaux & Systèmes, Sécurité, Cloud/DevOps." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Aller à l'accueil">
+      <span class="brand-dot">●</span> Boubacar<span class="muted">.</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#projects">Projets</a>
+      <a class="nav-link" href="#cv">CV</a>
+      <a class="nav-link" href="#courses">Cours</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="home" class="section hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="kicker">Administrateur Réseaux & Systèmes</p>
+          <h1 class="headline">
+            Boubacar <span class="accent">DIALLO</span>
+          </h1>
+          <p class="subhead">
+            Ingénieur Réseaux & Systèmes (Bac+5 — Université Paris‑Saclay), orienté
+            <strong>disponibilité</strong>, <strong>sécurité</strong> et <strong>automatisation</strong>.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="diallof.pdf" download>
+              <span class="btn-icon">⬇</span> Télécharger CV
+            </a>
+            <a class="btn ghost" href="#projects">
+              Voir mes projets <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <div class="icon-row" aria-label="Liens rapides">
+            <a class="icon-btn" href="mailto:boubacargenieinfo99@gmail.com" aria-label="Email">
+              <!-- mail -->
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </a>
+            <a class="icon-btn" href="tel:+33753939176" aria-label="Téléphone">
+              <!-- phone -->
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M6 2h5l1 5-3 2c1 3 3 5 6 6l2-3 5 1v5c0 1-1 2-2 2C10 21 3 14 3 4c0-1 1-2 3-2z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/boubacardiallo99/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <!-- linkedin -->
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M4 4h4v16H4zM6 3a2 2 0 110 4 2 2 0 010-4zM10 8h4v2c.6-1.2 2-2.2 4-2.2 3 0 5 2 5 5.6V20h-4v-6c0-1.8-.7-3-2.4-3-1.3 0-2 .9-2.3 1.7-.1.3-.1.7-.1 1.1V20h-4z"
+                  fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">2+ ans</div>
+              <div class="stat-label">Expérience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">LAN/WAN/Wi‑Fi</div>
+              <div class="stat-label">Réseaux</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">Sécurité</div>
+              <div class="stat-label">Zero‑Trust / VPN / MFA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait">
+            <div class="ring"></div>
+            <div class="portrait-inner">
+              <!-- Photo (dans /images) -->
+              <img class="avatar-img" src="images/LINK.jpeg" 
+              alt="Photo de Boubacar Diallo" loading="lazy" />
+
+              <p class="portrait-note">
+                Disponible pour un CDI à partir du <strong>15 août 2026</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Linux • OpenBSD • Windows Server</span>
+            <span class="chip">PF/Netfilter • VPN • ISO 27002/27005</span>
+            <span class="chip">Docker/Podman • GitLab CI • Ansible</span>
+            <span class="chip">Zabbix • Grafana • Splunk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Mes <span class="accent">Projets</span></h2>
+        <p>Une sélection de projets scolaires & techniques autour de la sécurité, de la haute disponibilité et du cloud.</p>
+      </div>
+
+      <div class="toolbar">
+        <input id="projectSearch" class="search" type="search" placeholder="Rechercher un projet (ex: BGP, Zero Trust, ONOS…)" />
+        <div class="filters" role="group" aria-label="Filtres projets">
+          <button class="pill active" data-filter="all">Tous</button>
+          <button class="pill" data-filter="security">Sécurité</button>
+          <button class="pill" data-filter="network">Réseaux</button>
+          <button class="pill" data-filter="cloud">Cloud/DevOps</button>
+        </div>
+      </div>
+
+      <div class="grid cards" id="projectGrid">
+        <article class="card" data-tags="security network">
+          <h3>Réseau Zero Trust</h3>
+          <p>Authentification forte, micro‑segmentation et politiques dynamiques.</p>
+          <ul class="mini">
+            <li>MFA + gestion des accès</li>
+            <li>Segmentation par VLAN / ACL</li>
+            <li>Approche “least privilege”</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="network">
+          <h3>Lab BGP / OSPF</h3>
+          <p>Conception d’un lab multi‑routeurs avec redondance et équilibrage.</p>
+          <ul class="mini">
+            <li>Routage dynamique</li>
+            <li>Redondance & bascule</li>
+            <li>Tests & validation</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="network">
+          <h3>SDN avec ONOS</h3>
+          <p>Déploiement d’un contrôleur ONOS et programmation de flux OpenFlow.</p>
+          <ul class="mini">
+            <li>Contrôleur SDN</li>
+            <li>Programmation de flux</li>
+            <li>Observabilité</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="security network">
+          <h3>HA OpenBSD</h3>
+          <p>Haute disponibilité : CARP, PF et routage local.</p>
+          <ul class="mini">
+            <li>Failover</li>
+            <li>Pare‑feu PF</li>
+            <li>Design résilient</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="network">
+          <h3>Cluster LVS + Keepalived</h3>
+          <p>Load‑balancing L4, failover et service DHCP redondant.</p>
+          <ul class="mini">
+            <li>LVS (Layer 4)</li>
+            <li>Keepalived</li>
+            <li>DHCP en redondance</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="network cloud">
+          <h3>Infrastructure multi‑VLAN</h3>
+          <p>LACP, VRRP, automatisation Ansible, Cumulus Linux.</p>
+          <ul class="mini">
+            <li>VRRP / LACP</li>
+            <li>Automatisation Ansible</li>
+            <li>Segmentation</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="security">
+          <h3>Sécurité réseau & sauvegarde</h3>
+          <p>Netfilter, analyse avancée (Wireshark/TCPdump) et BorgBackup.</p>
+          <ul class="mini">
+            <li>Durcissement</li>
+            <li>Analyse trafic</li>
+            <li>Plan de sauvegarde</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="cloud">
+          <h3>Projet Cloud & CI/CD</h3>
+          <p>Conteneurs Docker/Podman, GitLab CI et monitoring Grafana/CloudWatch.</p>
+          <ul class="mini">
+            <li>CI/CD</li>
+            <li>Observabilité</li>
+            <li>Industrialisation</li>
+          </ul>
+        </article>
+
+        <article class="card" data-tags="cloud">
+          <h3>Migration SQL → MongoDB</h3>
+          <p>Conteneurisation et administration via Cockpit/MySQL.</p>
+          <ul class="mini">
+            <li>Schéma & migration</li>
+            <li>Docker</li>
+            <li>Admin & supervision</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="section">
+      <div class="section-head">
+        <h2>Mon <span class="accent">CV</span></h2>
+        <p>Parcours, expériences, compétences et formation.</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Profil</h3>
+          <p class="muted">
+            Ingénieur Réseaux et Systèmes (Bac+5) avec une expérience en administration,
+            sécurisation et évolution d’infrastructures IT. Objectif : fiabilité, performance, sécurité.
+          </p>
+
+          <div class="callout">
+            <div class="callout-left">
+              <div class="dot"></div>
+              <div>
+                <div class="callout-title">Ouvert à un CDI</div>
+                <div class="callout-sub">À partir du 15 août 2026</div>
+              </div>
+            </div>
+            <a class="btn small" href="diallof.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+
+          <h3>Compétences clés</h3>
+          <div class="skill-grid">
+            <div class="skill">
+              <div class="skill-title">Réseaux</div>
+              <div class="skill-text">TCP/IP, VLAN, OSPF, BGP, VRRP, LACP, SDN (ONOS), Wireshark, TCPdump</div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Systèmes</div>
+              <div class="skill-text">Linux (Debian/Ubuntu), OpenBSD, Proxmox, Windows Server, Active Directory</div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Sécurité</div>
+              <div class="skill-text">PF/Netfilter, VPN, MFA, certificats, durcissement, ISO 27002/27005</div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Cloud/DevOps</div>
+              <div class="skill-text">Docker, Podman, Kubernetes (init.), AWS, GitLab CI, Ansible, PowerShell, Python</div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Monitoring</div>
+              <div class="skill-text">Zabbix, Grafana, SNMP, Splunk</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Expériences</h3>
+
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-date">02.2026 — 07.2026</div>
+              <div class="t-body">
+                <div class="t-title">Administrateur Réseaux et Systèmes <span class="muted">— Mairie de Saint‑Maur‑des‑Fossés</span></div>
+                <ul>
+                  <li>Disponibilité & performance des infra LAN/WAN/Wi‑Fi (Windows/Linux).</li>
+                  <li>Déploiement & sécurisation : switchs, routeurs, pare‑feux, AD, DNS, DHCP.</li>
+                  <li>Automatisation d’opérations d’exploitation pour réduire incidents et temps d’intervention.</li>
+                  <li>Renforcement sécurité : VPN, MFA, durcissement, conformité.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-date">05.2024 — 09.2024</div>
+              <div class="t-body">
+                <div class="t-title">Technicien informatique <span class="muted">— Ibis (Dunkerque)</span></div>
+                <ul>
+                  <li>Support utilisateurs : postes, logiciels, périphériques (résolution rapide d’incidents).</li>
+                  <li>Installation, configuration et maintenance des équipements & applications.</li>
+                  <li>Diagnostic matériel/logiciel et amélioration continue de la qualité de service.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3>Formation</h3>
+          <div class="edu">
+            <div class="edu-title">Master Computer & Network Systems (Bac+5)</div>
+            <div class="muted">Université Paris‑Saclay — en cours</div>
+            <ul>
+              <li>Administration systèmes & réseaux : conception, exploitation d’architectures complexes.</li>
+              <li>Sécurité : cryptographie, sécurité des protocoles et infrastructures.</li>
+              <li>Modélisation & optimisation : systèmes complexes, recherche opérationnelle, HPC.</li>
+            </ul>
+          </div>
+
+          <div class="row">
+            <div class="tagbox">
+              <div class="tagbox-title">Langues</div>
+              <div class="tags">
+                <span class="tag">Français</span>
+                <span class="tag">Anglais — CLES B2</span>
+              </div>
+            </div>
+            <div class="tagbox">
+              <div class="tagbox-title">Savoir‑être</div>
+              <div class="tags">
+                <span class="tag">Rigueur</span>
+                <span class="tag">Communication claire</span>
+                <span class="tag">Autonomie</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="section">
+      <div class="section-head">
+        <h2> <span class="accent">Cours</span></h2>
+          <!-- <p>Ce que je pratique / apprends actuellement (idéal pour ajouter tes UE exactes plus tard).</p> -->
+      </div>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3>Administration & exploitation</h3>
+          <p>Gestion d’infrastructures systèmes et réseaux, services et continuité de service.</p>
+          <ul class="mini">
+            <li>AD, DNS, DHCP</li>
+            <li>Virtualisation (Proxmox)</li>
+            <li>Automatisation (Ansible / PowerShell)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Sécurité des SI</h3>
+          <p>Durcissement, contrôle d’accès, chiffrement, bonnes pratiques et normes.</p>
+          <ul class="mini">
+            <li>PF / Netfilter</li>
+            <li>VPN, MFA, certificats</li>
+            <li>ISO 27002 / 27005</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Réseaux avancés</h3>
+          <p>Architecture réseau, routage dynamique, redondance, supervision.</p>
+          <ul class="mini">
+            <li>OSPF / BGP</li>
+            <li>VRRP / LACP</li>
+            <li>Zabbix / Grafana / SNMP</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Cloud & DevOps</h3>
+          <p>Conteneurisation, CI/CD et bases d’orchestration.</p>
+          <ul class="mini">
+            <li>Docker / Podman</li>
+            <li>GitLab CI</li>
+            <li>Kubernetes (init.)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Me <span class="accent">contacter</span></h2>
+        <p>Une question, une opportunité, ou juste envie d’échanger ?</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="panel">
+          <h3>Coordonnées</h3>
+
+          <div class="contact-item">
+            <div class="contact-label">Email</div>
+            <a href="mailto:boubacargenieinfo99@gmail.com">boubacargenieinfo99@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-label">Téléphone</div>
+            <a href="tel:+33753939176">+33 7 53 93 91 76</a>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/boubacardiallo99/" target="_blank" rel="noreferrer">
+              linkedin.com/in/boubacardiallo99
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-label">Mobilité</div>
+            <div class="muted">France (Permis B)</div>
+          </div>
+          
+        </div>
+
+        <div class="panel">
+          <h3>Envoyer un message</h3>
+          <form class="form" id="contactForm" autocomplete="on">
+            <label>
+              <span>Nom</span>
+              <input type="text" name="name" placeholder="Votre nom" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="vous@exemple.com" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Bonjour Boubacar, ..." required></textarea>
+            </label>
+            <button class="btn primary" type="submit">
+              Envoyer <span class="arrow">→</span>
+            </button>
+            <p class="muted small" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Boubacar Diallo</div>
+      <div class="muted">Fait avec HTML • CSS • JS</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
