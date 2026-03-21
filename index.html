@@ -33,13 +33,12 @@
     <section id="home" class="section hero">
       <div class="hero-grid">
         <div class="hero-left">
-          <p class="kicker">Administrateur Réseaux & Systèmes</p>
+          <p class="kicker">Ingénieur Réseaux & Systèmes</p>
           <h1 class="headline">
             Boubacar <span class="accent">DIALLO</span>
           </h1>
           <p class="subhead">
-            Ingénieur Réseaux & Systèmes (Bac+5 — Université Paris‑Saclay), orienté
-            <strong>disponibilité</strong>, <strong>sécurité</strong> et <strong>automatisation</strong>.
+           Ingénieur Réseaux et Systèmes au sein de la DSI de la Ville de Saint-Maur-des-Fossés (Bac+5 — Université Paris-Saclay), dédié à la <strong>fiabilité</strong>, la <strong>sécurisation</strong> et l’<strong>automatisation</strong> des infrastructures numériques.
           </p>
 
           <div class="cta-row">
@@ -80,14 +79,27 @@
               <div class="stat-value">2+ ans</div>
               <div class="stat-label">Expérience</div>
             </div>
+
             <div class="stat">
-              <div class="stat-value">LAN/WAN/Wi‑Fi</div>
-              <div class="stat-label">Réseaux</div>
+              <div class="stat-value">LAN • WAN • Wi-Fi • SD-WAN</div>
+              <div class="stat-label">Infrastructures réseau</div>
             </div>
+
             <div class="stat">
-              <div class="stat-value">Sécurité</div>
-              <div class="stat-label">Zero‑Trust / VPN / MFA</div>
+              <div class="stat-value">Active Directory • Ansible</div>
+              <div class="stat-label">Administration & automatisation</div>
             </div>
+
+            <div class="stat">
+              <div class="stat-value">VPN • MFA • Zero-Trust</div>
+              <div class="stat-label">Sécurité des systèmes</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-value">Téléphonie • Vidéosurveillance</div>
+              <div class="stat-label">Services d'infrastructure</div>
+            </div>
+
           </div>
         </div>
 
@@ -107,9 +119,11 @@
 
           <div class="chips">
             <span class="chip">Linux • OpenBSD • Windows Server</span>
-            <span class="chip">PF/Netfilter • VPN • ISO 27002/27005</span>
+            <span class="chip">PF/Netfilter • VPN  •Stormshield</span>
             <span class="chip">Docker/Podman • GitLab CI • Ansible</span>
-            <span class="chip">Zabbix • Grafana • Splunk</span>
+            <span class="chip">mRemote • GLPI • XIVO •  </span>
+            <span class="chip">Zabbix • Librenms • SNMP</span>
+            <span class="chip">Proxmox • ESXI • vmware• virtualbox</span>
           </div>
         </div>
       </div>
@@ -119,7 +133,7 @@
     <section id="projects" class="section">
       <div class="section-head">
         <h2>Mes <span class="accent">Projets</span></h2>
-        <p>Une sélection de projets scolaires & techniques autour de la sécurité, de la haute disponibilité et du cloud.</p>
+        <p>Une sélection de projets techniques autour de la sécurité, de la haute disponibilité et du cloud.</p>
       </div>
 
       <div class="toolbar">
@@ -133,64 +147,183 @@
       </div>
 
       <div class="grid cards" id="projectGrid">
-        <article class="card" data-tags="security network">
-          <h3>Réseau Zero Trust</h3>
-          <p>Authentification forte, micro‑segmentation et politiques dynamiques.</p>
-          <ul class="mini">
-            <li>MFA + gestion des accès</li>
-            <li>Segmentation par VLAN / ACL</li>
-            <li>Approche “least privilege”</li>
-          </ul>
-        </article>
+      <article class="card" data-tags="security network">
+        <h3>Architecture Réseau Zero Trust</h3>
 
-        <article class="card" data-tags="network">
-          <h3>Lab BGP / OSPF</h3>
-          <p>Conception d’un lab multi‑routeurs avec redondance et équilibrage.</p>
-          <ul class="mini">
-            <li>Routage dynamique</li>
-            <li>Redondance & bascule</li>
-            <li>Tests & validation</li>
-          </ul>
-        </article>
+        <p>
+          Dans le cadre d’un projet académique orienté cybersécurité, j’ai conçu et
+          déployé avec SOORIYAKUMAR Karthikan une architecture réseau basée sur le modèle <strong>Zero Trust</strong>.
+          L’objectif était de démontrer comment une approche reposant sur la
+          vérification systématique des identités et la micro-segmentation peut
+          améliorer la sécurité d’un réseau d’entreprise. L’architecture a été
+          simulée à l’aide d’un contrôleur <strong>SDN</strong> et de l’outil
+        </p>
 
-        <article class="card" data-tags="network">
-          <h3>SDN avec ONOS</h3>
-          <p>Déploiement d’un contrôleur ONOS et programmation de flux OpenFlow.</p>
-          <ul class="mini">
-            <li>Contrôleur SDN</li>
-            <li>Programmation de flux</li>
-            <li>Observabilité</li>
-          </ul>
-        </article>
+        <ul class="mini">
+          <li>Mise en place d’une authentification forte (MFA)</li>
+          <li>Segmentation réseau via VLAN et ACL</li>
+          <li>Application du principe de <em>least privilege</em></li>
+          <li>Supervision et monitoring du réseau</li>
+          <li>Révocation automatique des accès en cas de comportement suspect</li>
+        </ul>
 
-        <article class="card" data-tags="security network">
-          <h3>HA OpenBSD</h3>
-          <p>Haute disponibilité : CARP, PF et routage local.</p>
-          <ul class="mini">
-            <li>Failover</li>
-            <li>Pare‑feu PF</li>
-            <li>Design résilient</li>
-          </ul>
-        </article>
+        <p>
+          <a class="project-link" href="rapport/Implementation_Memoire_Zero_Trust_Sooriyakumar_Diallo-1.pdf" target="_blank">
+            Voir le rapport complet du projet (PDF)
+          </a>
+        </p>
 
-        <article class="card" data-tags="network">
-          <h3>Cluster LVS + Keepalived</h3>
-          <p>Load‑balancing L4, failover et service DHCP redondant.</p>
-          <ul class="mini">
-            <li>LVS (Layer 4)</li>
-            <li>Keepalived</li>
-            <li>DHCP en redondance</li>
-          </ul>
-        </article>
+        <p>
+          <a class="project-link" href="rapport/Mémoire_ZeroTrust_Etat_de_l_art_SOORIYAKUMAR_DIALLO_version_finale.pdf" target="_blank">
+            L'État de l'art
+          </a>
+       </p>
+      </article>
 
-        <article class="card" data-tags="network cloud">
-          <h3>Infrastructure multi‑VLAN</h3>
-          <p>LACP, VRRP, automatisation Ansible, Cumulus Linux.</p>
+      <article class="card" data-tags="network sdn">
+
+        <h3>Expérimentations en Software Defined Networking (SDN)</h3>
+
+        <p>
+           Réalisation de plusieurs laboratoires autour du <strong>Software Defined Networking (SDN)</strong>
+           afin de comprendre le fonctionnement des architectures réseau programmables.
+           Les expérimentations ont été menées avec <strong>Mininet</strong>, <strong>OpenFlow</strong> et
+           un contrôleur <strong>POX</strong>, dans un environnement virtualisé sous Linux.
+        </p>
+
           <ul class="mini">
-            <li>VRRP / LACP</li>
-            <li>Automatisation Ansible</li>
-            <li>Segmentation</li>
+            <li>Création de topologies réseau virtuelles avec Mininet</li>
+            <li>Configuration et utilisation d’un contrôleur SDN (POX)</li>
+            <li>Tests de connectivité entre hôtes et analyse du trafic</li>
+            <li>Observation et gestion des tables de flux OpenFlow</li>
+            <li>Simulation de contraintes réseau : bande passante, latence et défaillance de lien</li>
           </ul>
+
+          <p>
+            <a class="project-link" href="rapport/rapport_projet_1_software_defined.pdf" target="_blank">
+              Rapport 1 – Découverte de Mininet et OpenFlow
+            </a>
+          </p>
+
+          <p>
+            <a class="project-link" href="rapport/Diallo_Boubacar_Lab3_SDN-3.pdf" target="_blank">
+              Rapport 2 – Topologies SDN et contrôleur POX
+            </a>
+          </p>
+
+          <p>
+            <a class="project-link" href="rapport/Diallo_Boubacar_Lab4_SDN.pdf" target="_blank">
+              Rapport 3 – Tests avancés et simulation de contraintes réseau
+            </a>
+          </p>
+
+      </article>
+
+      <article class="card" data-tags="security network">
+        <h3>HA OpenBSD — Tolérance de panne avec PF</h3>
+
+        <p>
+          Dans le cadre du Master CNS SR (Université Paris-Saclay), conception et déploiement
+          d'une architecture réseau redondante sous OpenBSD pour garantir la continuité de service
+          en cas de défaillance d'un routeur. Deux routeurs pare-feux (PF1/PF2) configurés en
+          mode maître/secours via <strong>CARP</strong> et <strong>pfsync</strong>, avec
+          basculement automatique et maintien des sessions actives (SSH, TCP).
+        </p>
+
+        <ul class="mini">
+          <li>CARP — passerelle virtuelle partagée, failover transparent</li>
+          <li>pfsync — synchronisation des tables d'états en temps réel</li>
+          <li>Pare-feu PF — filtrage, routage inter-VLAN, préemption</li>
+          <li>0 % de perte de paquets validé par ping, traceroute et Wireshark</li>
+        </ul>
+
+        <p>
+          <a class="project-link" href="rapport/rapport_pf_tolerancepanne.pdf" target="_blank">
+            Voir le rapport complet (PDF)
+          </a>
+        </p>
+      </article>
+
+       <article class="card" data-tags="network cloud">
+          <h3>Infrastructure multi‑VLAN — NFS, LACP & VRRP</h3>
+
+          <p>
+              Dans le cadre du Master CNS SR (Université Paris-Saclay, groupe 5), conception et
+              déploiement complet d'une infrastructure réseau d'entreprise multi-couches sous
+              <strong>Cumulus Linux</strong>, répondant à des exigences d'isolation, de partage de
+              ressources et de haute disponibilité. L'infrastructure devait isoler deux machines
+              clientes, leur offrir un accès sécurisé à un serveur NFS, et tolérer la panne de
+              n'importe quel équipement actif.
+          </p>
+
+          <ul class="mini">
+              <li>Segmentation par VLANs (10/20/30) et routage inter-VLAN via Switch L3</li>
+              <li>Agrégation LACP (802.3ad) sur le serveur NFS — redondance et performance</li>
+              <li>MLAG entre Switch1 et Switch2 — tolérance de panne couche Access</li>
+              <li>VRRP (Switch3/Switch4) — passerelle virtuelle haute disponibilité L3</li>
+              <li>Automatisation Ansible — déploiement et vérification de configuration</li>
+              <li>0 % de perte de paquets validé sous panne, ping, traceroute et Wireshark</li>
+          </ul>
+
+          <p>
+            <a class="project-link" href="rapport/Rapport.pdf" target="_blank">
+              Voir le rapport complet (PDF)
+            </a>
+          </p>
+       </article>
+
+      <article class="card" data-tags="network cloud">
+        <h3>Cluster LVS + Keepalived — Load Balancing & Failover</h3>
+
+        <p>
+          Dans le cadre du Master M1 ASR (Université Paris-Saclay), mise en place d'une
+          infrastructure de répartition de charge et de haute disponibilité combinant
+          <strong>LVS-NAT</strong> et <strong>Keepalived</strong>. L'enjeu était de garantir
+          la continuité du service web en cas de panne d'un directeur ou d'un serveur
+          backend, tout en distribuant équitablement le trafic entre les serveurs réels.
+        </p>
+
+        <ul class="mini">
+          <li>VRRP (Keepalived) — IP virtuelle partagée entre deux directeurs LVS maître/secours</li>
+          <li>LVS-NAT (ipvsadm) — répartition de charge Round Robin vers les serveurs réels</li>
+          <li>Health checker TCP — détection automatique des pannes et mise à jour de la table IPVS</li>
+          <li>Sorry Server — backend de dernier recours activé sous quorum minimal</li>
+          <li>Analyse Wireshark — traçage du flux NAT complet (client → directeur → serveur → retour)</li>
+          <li>Basculement validé : 0 interruption de service lors de la panne du directeur maître</li>
+        </ul>
+
+        <p>
+          <a class="project-link" href="rapport/Rapport_Final_Lvs_Nat_DIALLO_Boubacar.pdf" target="_blank">
+            Voir le rapport complet (PDF)
+          </a>
+        </p>
+      </article>
+
+       <article class="card" data-tags="security cloud">
+          <h3>Sécurité réseau & sauvegarde — BorgBackup & ZFS</h3>
+
+          <p>
+            Dans le cadre du Master M1 ASR (Université Paris-Saclay), mise en place d'une
+            infrastructure de sauvegarde sécurisée et automatisée avec <strong>BorgBackup</strong>
+            sur un dépôt distant. L'enjeu était de protéger les données contre la perte accidentelle
+            tout en garantissant la confidentialité, l'intégrité et la rétention maîtrisée des archives,
+            avec une couche de protection supplémentaire via <strong>ZFS</strong>.
+          </p>
+
+          <ul class="mini">
+            <li>Accès SSH sécurisé — clé ed25519, utilisateur dédié, mode append-only</li>
+            <li>Chiffrement du dépôt Borg (repokey) — confidentialité des archives</li>
+            <li>Compression lz4 + déduplication — optimisation de l'espace disque</li>
+            <li>Automatisation cron + script bash — sauvegardes planifiées avec logs</li>
+            <li>Politique de rétention prune — 7 quotidiennes, 4 hebdomadaires, 6 mensuelles</li>
+            <li>ZFS + snapshots immuables — protection anti-suppression accidentelle du dépôt</li>
+          </ul>
+
+          <p>
+            <a class="project-link" href="rapport/Rapport_projet_ASR_BorgBackup_DIALLO_Boubacar.pdf" target="_blank">
+              Voir le rapport complet (PDF)
+            </a>
+          </p>
         </article>
 
         <article class="card" data-tags="security">
@@ -267,11 +400,11 @@
             </div>
             <div class="skill">
               <div class="skill-title">Cloud/DevOps</div>
-              <div class="skill-text">Docker, Podman, Kubernetes (init.), AWS, GitLab CI, Ansible, PowerShell, Python</div>
+              <div class="skill-text">Docker, Podman, AWS, GitLab CI, Ansible, PowerShell, Python</div>
             </div>
             <div class="skill">
               <div class="skill-title">Monitoring</div>
-              <div class="skill-text">Zabbix, Grafana, SNMP, Splunk</div>
+              <div class="skill-text">Zabbix, SNMP, Librenms</div>
             </div>
           </div>
         </div>
@@ -281,9 +414,9 @@
 
           <div class="timeline">
             <div class="t-item">
-              <div class="t-date">02.2026 — 07.2026</div>
+              <div class="t-date">02.2026 — 08.2026</div>
               <div class="t-body">
-                <div class="t-title">Administrateur Réseaux et Systèmes <span class="muted">— Mairie de Saint‑Maur‑des‑Fossés</span></div>
+                <div class="t-title">Ingénieur Réseaux et Systèmes (DSI) <span class="muted">— Mairie de Saint‑Maur‑des‑Fossés</span></div>
                 <ul>
                   <li>Disponibilité & performance des infra LAN/WAN/Wi‑Fi (Windows/Linux).</li>
                   <li>Déploiement & sécurisation : switchs, routeurs, pare‑feux, AD, DNS, DHCP.</li>

@@ -552,3 +552,15 @@ input::placeholder, textarea::placeholder{ color: rgba(167,178,195,.75); }
    transform: scale(1.12);
 }
 
+.project-link{
+  color: #4ee06b;          /* couleur verte du thème */
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.project-link:hover{
+  color: #7cf28f;
+  text-decoration: none;
+}
