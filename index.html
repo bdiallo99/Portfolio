@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boubacar Diallo — Portfolio</title>
+  <title>Boubacar Diallo</title>
   <meta name="description" content="Portfolio de Boubacar Diallo — Administration Réseaux & Systèmes, Sécurité, Cloud/DevOps." />
   <link rel="stylesheet" href="style.css?v=2" />
 </head>
@@ -133,7 +133,24 @@
     <section id="projects" class="section">
       <div class="section-head">
         <h2>Mes <span class="accent">Projets</span></h2>
-        <p>Une sélection de projets techniques autour de la sécurité, de la haute disponibilité et du cloud.</p>
+        <p>
+          Une sélection de projets techniques autour de la sécurité, de la haute
+          disponibilité et du cloud.
+        </p>
+      </div>
+
+      <div class="callout" style="margin-bottom: 18px;">
+        <div class="callout-left">
+          <div class="dot"></div>
+          <div>
+            <div class="callout-title">Confidentialité des projets DSI</div>
+            <div class="callout-sub">
+              Les projets réalisés à la DSI de la Ville de Saint-Maur-des-Fossés sont présentés
+              sans rapport joint par souci de confidentialité. Les chiffres mentionnés sont
+              des estimations et ne reflètent pas les données exactes de l'infrastructure.
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="toolbar">
@@ -147,6 +164,90 @@
       </div>
 
       <div class="grid cards" id="projectGrid">
+            
+     <article class="card" data-tags="network cloud">
+        <h3>Automatisation Ansible — DSI Mairie (plus de 100 équipements)</h3>
+
+        <p>
+          À la DSI de la Ville de Saint-Maur-des-Fossés, j'ai conçu une infrastructure
+          d'automatisation complète avec <strong>Ansible</strong> pour industrialiser
+          la gestion de plus de 100 équipements hétérogènes (Aruba, Cisco, Stormshield).
+        </p>
+
+        <ul class="mini">
+          <li>
+            <strong>Inventaire structuré</strong> — classification de 100+ équipements
+            par type, site et version OS pour cibler les déploiements avec précision
+          </li>
+          <li>
+            <strong>Ansible Vault</strong> — chiffrement de tous les secrets
+            (credentials, enable passwords, clés SSH) pour éliminer les mots de passe
+            en clair dans les playbooks et dépôts Git
+          </li>
+          <li>
+            <strong>Gestion multi-constructeurs</strong> — playbooks compatibles avec
+            les modules <code>aruba_osswitches</code>, <code>ios</code> et
+            <code>netconf</code> pour adresser des équipements de générations et
+            constructeurs différents
+          </li>
+          <li>
+            <strong>Reporting automatisé</strong> — playbook dédié collectant l'état,
+            les versions firmware, les VLANs actifs et les statistiques d'interfaces
+            de chaque équipement, puis générant des rapports JSON horodatés
+          </li>
+          <li>
+            <strong>Dashboard HTML</strong> — script Python transformant les rapports
+            JSON en une page web statique affichant en temps réel l'état, les
+            statistiques et les alertes de chaque équipement avec un code couleur
+            vert/rouge par site
+          </li>
+        </ul>
+      </article>
+      <article class="card" data-tags="network cloud">
+          <h3>Supervision réseau — LibreNMS (DSI Mairie)</h3>
+
+          <p>
+            Dans le cadre de mes missions à la DSI de la Ville de Saint-Maur-des-Fossés,
+            mise en place et administration d'une supervision réseau complète sous
+            <strong>LibreNMS</strong> couvrant l'ensemble de l'infrastructure active :
+            plus de <strong>200 équipements réseau</strong> (switchs, routeurs, pare-feux)
+            et <strong>350 caméras IP</strong> répartis sur les sites de la collectivité.
+            L'objectif était d'offrir une visibilité en temps réel sur la disponibilité
+            et les performances de l'infrastructure.
+          </p>
+
+          <ul class="mini">
+            <li>Intégration SNMP — supervision avancée des switchs, routeurs et pare-feux</li>
+            <li>Supervision ICMP — monitoring de disponibilité des 350 caméras IP</li>
+            <li>Ajout en masse via script bash — automatisation de l'intégration des équipements</li>
+            <li>Découverte automatique par sous-réseau — scan et onboarding des nouveaux équipements</li>
+            <li>Custom Maps — cartographie visuelle de l'infrastructure par site géographique</li>
+            <li>Alerting — détection et notification en temps réel des équipements hors ligne</li>
+          </ul>
+      </article>
+      <article class="card" data-tags="network">
+          <h3>Stacking VSF — Aruba CX6100 (DSI Mairie)</h3>
+
+          <p>
+            Dans le cadre de mes missions à la DSI de la Ville de Saint-Maur-des-Fossés,
+            mise en place d'une architecture de commutation hautement disponible en
+            regroupant trois switches physiques <strong>Aruba CX6100</strong> en un
+            switch logique unique via le protocole <strong>VSF</strong> (Virtual
+            Switching Framework). L'objectif était de simplifier l'administration
+            du réseau tout en éliminant les points de défaillance uniques au niveau
+            de la couche distribution.
+          </p>
+
+          <ul class="mini">
+            <li>Mise à jour firmware (≥ 10.16) — prérequis VSF via interface web Aruba</li>
+            <li>Configuration VSF auto-stacking — deux switches fusionnés en un switch logique</li>
+            <li>Liens physiques 10 Gbps — interconnexion haute performance entre membres</li>
+            <li>Gestion conducteur/standby — basculement automatique en cas de panne</li>
+            <li>Administration centralisée — une seule IP de management, une seule config</li>
+            <li>Vérification et validation — <code>sh vsf</code>, <code>sh vsf link</code>, tests de continuité</li>
+          </ul>
+      </article>
+
       <article class="card" data-tags="security network">
         <h3>Architecture Réseau Zero Trust</h3>
 
@@ -326,34 +427,121 @@
           </p>
         </article>
 
-        <article class="card" data-tags="security">
-          <h3>Sécurité réseau & sauvegarde</h3>
-          <p>Netfilter, analyse avancée (Wireshark/TCPdump) et BorgBackup.</p>
+        <article class="card" data-tags="network cloud">
+          <h3>Cloud & Sécurité Wi-Fi — Aruba Central & ClearPass (DSI Mairie)</h3>
+
+          <p>
+            À la DSI de la Ville de Saint-Maur-des-Fossés, migration de la gestion
+            du parc Wi-Fi vers <strong>Aruba Central</strong> pour centraliser
+            l'administration des bornes et des contrôleurs depuis une plateforme
+            cloud unique, couplée à <strong>ClearPass</strong> pour sécuriser
+            les accès réseau contre les intrusions.
+          </p>
+
           <ul class="mini">
-            <li>Durcissement</li>
-            <li>Analyse trafic</li>
-            <li>Plan de sauvegarde</li>
+            <li>
+              <strong>Aruba Central</strong> — centralisation cloud de la gestion
+              de l'ensemble des équipements Wi-Fi de la collectivité depuis une
+              interface unique
+            </li>
+            <li>
+              <strong>Contrôleur virtuel</strong> — déploiement et configuration
+              d'un contrôleur Wi-Fi virtualisé pour orchestrer et provisionner
+              les bornes Wi-Fi des différents sites
+            </li>
+            <li>
+              <strong>Provisioning des APs</strong> — génération et déploiement
+              des bornes Wi-Fi via le contrôleur virtuel avec profils de
+              configuration centralisés par site
+            </li>
+            <li>
+              <strong>ClearPass — NAC</strong> — mise en place du contrôle
+              d'accès réseau pour authentifier les équipements et bloquer
+              automatiquement tout accès non autorisé au réseau de la collectivité
+            </li>
+            <li>
+              <strong>Segmentation & politique d'accès</strong> — définition
+              des rôles utilisateurs et équipements pour cloisonner les flux
+              entre les réseaux agents, invités et équipements IoT
+            </li>
+            <li>
+              <strong>Résultat</strong> — visibilité centralisée sur l'ensemble
+              du parc Wi-Fi, sécurité renforcée contre les intrusions et
+              administration simplifiée depuis Aruba Central
+            </li>
+          </ul>
+        </article>
+        <article class="card" data-tags="security cloud">
+          <h3>Active Directory — Gestion d'identités & GPO</h3>
+
+          <p>
+            Projet personnel de lab virtualisé sous <strong>Proxmox</strong> simulant
+            l'environnement d'un SI d'entreprise : déploiement d'un domaine
+            <strong>Active Directory</strong> complet avec gestion des identités,
+            des droits et des politiques de sécurité, reproduisant les pratiques
+            réelles d'administration système en entreprise.
+          </p>
+
+          <ul class="mini">
+            <li>
+              <strong>Déploiement du domaine</strong> — installation et configuration
+              d'un contrôleur de domaine Windows Server, création de la forêt AD
+              et des unités d'organisation (OU) hiérarchisées par département
+            </li>
+            <li>
+              <strong>Gestion des utilisateurs & groupes</strong> — création de comptes
+              utilisateurs, groupes de sécurité et attribution des droits selon
+              le principe du moindre privilège (least privilege)
+            </li>
+            <li>
+              <strong>GPO — Politiques de sécurité</strong> — déploiement de stratégies
+              de groupe pour restreindre l'accès au panneau de configuration,
+              bloquer les périphériques USB, forcer le verrouillage de session
+              et appliquer des politiques de mot de passe robustes
+            </li>
+            <li>
+              <strong>Contrôle d'accès aux ressources</strong> — gestion des
+              permissions NTFS sur les partages réseau, accès différenciés
+              selon les groupes métiers (RH, IT, direction)
+            </li>
+            <li>
+              <strong>Jonction au domaine</strong> — intégration de machines
+              Windows clientes au domaine et vérification de l'application
+              des GPO sur les postes de travail
+            </li>
           </ul>
         </article>
 
-        <article class="card" data-tags="cloud">
-          <h3>Projet Cloud & CI/CD</h3>
-          <p>Conteneurs Docker/Podman, GitLab CI et monitoring Grafana/CloudWatch.</p>
-          <ul class="mini">
-            <li>CI/CD</li>
-            <li>Observabilité</li>
-            <li>Industrialisation</li>
-          </ul>
-        </article>
+        <article class="card" data-tags="security linux cloud">
+          <h3>Authentification forte avec YubiKey — MFA, U2F & FIDO2</h3>
 
-        <article class="card" data-tags="cloud">
-          <h3>Migration SQL → MongoDB</h3>
-          <p>Conteneurisation et administration via Cockpit/MySQL.</p>
+          <p>
+            Mise en place d'une infrastructure d’authentification sécurisée dans un environnement
+            Linux (Debian) afin de renforcer la protection des accès SSH et systèmes face aux
+            menaces actuelles (phishing, vol de credentials, brute force).
+          </p>
+
+          <p>
+            Conception et déploiement d’une solution multi-facteurs basée sur des clés matérielles
+            <strong>YubiKey</strong>, intégrant TOTP, U2F et FIDO2 pour une authentification robuste
+            et moderne de type passwordless.
+          </p>
+
           <ul class="mini">
-            <li>Schéma & migration</li>
-            <li>Docker</li>
-            <li>Admin & supervision</li>
+            <li>MFA (TOTP + YubiKey) via PAM — sécurisation des accès SSH</li>
+            <li>Configuration avancée OpenSSH (publickey + keyboard-interactive)</li>
+            <li>Implémentation U2F (pam_u2f) pour authentification système Linux</li>
+            <li>Déploiement FIDO2 / Passkeys — résistance au phishing</li>
+            <li>Clés SSH matérielles (ed25519-sk) — sécurité renforcée</li>
+            <li>Analyse des mécanismes cryptographiques (challenge / response)</li>
+            <li>Tests validés : authentification robuste et sans mot de passe</li>
           </ul>
+
+          <p>
+            <a class="project-link" href="rapport/Rapport_yubikey_Zhipeng_WANG_DIALLO_Boubacar.pdf" target="_blank">
+              Voir le rapport complet (PDF)
+            </a>
+          </p>
         </article>
       </div>
     </section>
