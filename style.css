@@ -564,3 +564,33 @@ input::placeholder, textarea::placeholder{ color: rgba(167,178,195,.75); }
   color: #7cf28f;
   text-decoration: none;
 }
+
+
+.photo-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.photo-card{
+  background:#111827;
+  border-radius:12px;
+  overflow:hidden;
+  transition:transform 0.3s ease;
+}
+
+.photo-card:hover{
+  transform:scale(1.03);
+}
+
+.photo-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.photo-card p{
+  padding:10px;
+  font-size:14px;
+  color:#ccc;
+}
