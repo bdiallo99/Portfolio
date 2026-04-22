@@ -93,3 +93,47 @@ form?.addEventListener("submit", (e) => {
 
 // Footer year
 document.getElementById("year").textContent = String(new Date().getFullYear());
+
+// ====== Carrousel Recommandations ======
+(function () {
+  const track   = document.getElementById("recoTrack");
+  const prev    = document.getElementById("recoPrev");
+  const next    = document.getElementById("recoNext");
+  const dots    = [...document.querySelectorAll(".reco-dot")];
+  const embeds  = [...document.querySelectorAll(".reco-embed")];
+  const numEl   = document.getElementById("recoCurrentNum");
+  const total   = dots.length;
+  let current   = 0;
+
+  function loadEmbed(index) {
+    const iframe = embeds[index];
+    if (iframe && !iframe.src && iframe.dataset.src) {
+      iframe.src = iframe.dataset.src;
+    }
+  }
+
+  function goTo(index) {
+    current = index;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    prev.disabled = current === 0;
+    next.disabled = current === total - 1;
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+    if (numEl) numEl.textContent = current + 1;
+    loadEmbed(current);
+  }
+
+  prev?.addEventListener("click", () => goTo(Math.max(0, current - 1)));
+  next?.addEventListener("click", () => goTo(Math.min(total - 1, current + 1)));
+  dots.forEach((dot) => dot.addEventListener("click", () => goTo(Number(dot.dataset.index))));
+
+  const viewport = document.getElementById("recoViewport");
+  let startX = 0;
+  viewport?.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  viewport?.addEventListener("touchend", (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40)
+      goTo(diff > 0 ? Math.min(total - 1, current + 1) : Math.max(0, current - 1));
+  });
+
+  goTo(0); // charge uniquement le 1er PDF au démarrage
+})();
