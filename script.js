@@ -112,14 +112,14 @@ document.getElementById("year").textContent = String(new Date().getFullYear());
     }
   }
 
-  function goTo(index) {
+  function goTo(index, autoInit = false) {
     current = index;
     track.style.transform = `translateX(-${current * 100}%)`;
     prev.disabled = current === 0;
     next.disabled = current === total - 1;
     dots.forEach((d, i) => d.classList.toggle("active", i === current));
     if (numEl) numEl.textContent = current + 1;
-    loadEmbed(current);
+    if (!autoInit) loadEmbed(current);
   }
 
   prev?.addEventListener("click", () => goTo(Math.max(0, current - 1)));
@@ -135,5 +135,5 @@ document.getElementById("year").textContent = String(new Date().getFullYear());
       goTo(diff > 0 ? Math.min(total - 1, current + 1) : Math.max(0, current - 1));
   });
 
-  goTo(0); // charge uniquement le 1er PDF au démarrage
+  goTo(0, true); // initialise sans charger le PDF
 })();
